@@ -16,3 +16,9 @@ name = "variables"
 
 [[bin]]
 name = "data_types"
+
+[[bin]]
+name = "func"
+
+[[bin]]
+name = "control_flow"
