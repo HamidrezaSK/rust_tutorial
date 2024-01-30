@@ -13,3 +13,6 @@ name = "string"
 
 [[bin]]
 name = "reference"
+
+[[bin]]
+name = "slice"
