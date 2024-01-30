@@ -10,3 +10,6 @@ edition = "2021"
 
 [[bin]]
 name = "string"
+
+[[bin]]
+name = "reference"
