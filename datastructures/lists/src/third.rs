@@ -54,6 +54,21 @@ impl<'a, T> Iterator for Iter<'a, T> {
     }
 }
 
+impl<T> Drop for List<T>{
+    fn drop(&mut self){
+        let mut cur_link = self.head.take();
+        
+        while let Some(rc_node) = cur_link {
+            if let Ok(mut rc_node) = Rc::try_unwrap(rc_node) {
+                cur_link = rc_node.next.take();
+            } else {
+                break;
+            }
+        }
+
+    }
+}
+
 #[cfg(test)]
 mod test {
     use super::List;
